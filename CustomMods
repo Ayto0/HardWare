@@ -1,4 +1,3 @@
-runFunction(function()
     local old
     local DamageIndicatorCustom = {["Enabled"] = false}
     DamageIndicatorCustom = GuiLibrary["ObjectsThatCanBeSaved"]["RenderWindow"]["Api"].CreateOptionsButton({
