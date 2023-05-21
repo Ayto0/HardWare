@@ -546,8 +546,3 @@ UIS.InputEnded:Connect(function(input, gameProcessedEvent)
         GuiObjects.BedWarsUI.TabList.Visible = false
     end
 end)
-		else
-			game.CoreGui.ScreenGui.Destroy()
-		end
-	end
-})
