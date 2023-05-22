@@ -1,3 +1,8 @@
+            task.spawn(function()
+				local Hum = game.Players.LocalPlayer.Character:FindFirstChild("Humanoid")
+					if not Hum then
+						repeat task.wait() until Hum
+					end
 				local Animate = game:GetService("Players").LocalPlayer.Character.Animate
 				----Cartoony
 				if animrun.Value == "Cartoony" and animtype.Value == "Custom" then
@@ -461,4 +466,3 @@ end)
 		Name = "Climb",
 		List = {"Cartoony", "Levitation", "Robot", "Stylish", "Superhero", "Zombie", "Ninja", "Knight", "Mage", "Pirate", "Elder", "Toy", "Bubbly", "Astronaut", "Vampire", "Werewolf", "Rthro", "Oldschool"},
 		Function = function() end
-	})
