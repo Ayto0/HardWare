@@ -83,7 +83,7 @@ local function CreateMainWindow()
     wwweasygg.Size = UDim2.new(0.948717952, 0, 0.119227365, 0)
     wwweasygg.Font = Enum.Font.SourceSans
     wwweasygg.Text = "rel hypixel"
-    wwweasygg.TextColor3 =  Color3.fromRG(43, 189, 128)
+    wwweasygg.TextColor3 =  Color3.fromRGB(43, 189, 128)
     wwweasygg.TextSize = 27.000
     wwweasygg.TextXAlignment = Enum.TextXAlignment.Left
     wwweasygg.TextYAlignment = Enum.TextYAlignment.Bottom
@@ -109,7 +109,7 @@ local function CreateMainWindow()
     BEDWARS.Size = UDim2.new(1, 0, 0.0746753216, 0)
     BEDWARS.Font = Enum.Font.SourceSans
     BEDWARS.Text = "HWPriv Stats"
-    BEDWARS.TextColor3 = Color3.fromHSV(tick() % 5 / 5, 1, 1)
+    BEDWARS.TextColor3 = Color3.fromRGB(43, 189, 128)
     BEDWARS.TextSize = 27.000
 
     GameInfoFrame.Name = "GameInfoFrame"
