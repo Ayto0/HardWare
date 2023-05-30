@@ -82,8 +82,8 @@ local function CreateMainWindow()
     wwweasygg.Position = UDim2.new(0.051282052, 0, 1, 0)
     wwweasygg.Size = UDim2.new(0.948717952, 0, 0.119227365, 0)
     wwweasygg.Font = Enum.Font.SourceSans
-    wwweasygg.Text = "FixedByAyto"
-    wwweasygg.TextColor3 = Color3.fromRGB(252, 255, 75)
+    wwweasygg.Text = "rel hypixel"
+    wwweasygg.TextColor3 = Color3.new(252/255, 255/255, 75/255)
     wwweasygg.TextSize = 27.000
     wwweasygg.TextXAlignment = Enum.TextXAlignment.Left
     wwweasygg.TextYAlignment = Enum.TextYAlignment.Bottom
