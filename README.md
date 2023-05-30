@@ -1,3 +1,1 @@
-THESE ARE CUSTOMMODULES FOR HARDWARE CONFIG
-
-IF TAKING THESE ADD "Module made by Ayto"
+skid this idc
