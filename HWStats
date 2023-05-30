@@ -108,7 +108,7 @@ local function CreateMainWindow()
     BEDWARS.BorderSizePixel = 0
     BEDWARS.Size = UDim2.new(1, 0, 0.0746753216, 0)
     BEDWARS.Font = Enum.Font.SourceSans
-    BEDWARS.Text = string.format("\27[38;2;%d;%d;%dm%s\27[0m", math.random(0, 255), math.random(0, 255), math.random(0, 255), "HWPriv Stats")
+    BEDWARS.Text = "HWPriv Stats"
     BEDWARS.TextColor3 = Color3.fromHSV(tick() % 5 / 5, 1, 1)
     BEDWARS.TextSize = 27.000
 
