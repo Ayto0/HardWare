@@ -82,8 +82,8 @@ local function CreateMainWindow()
     wwweasygg.Position = UDim2.new(0.051282052, 0, 1, 0)
     wwweasygg.Size = UDim2.new(0.948717952, 0, 0.119227365, 0)
     wwweasygg.Font = Enum.Font.SourceSans
-    wwweasygg.Text = "rel hypixel"
-    wwweasygg.TextColor3 =  Color3.fromRGB(43, 189, 128)
+    wwweasygg.Text = "AyoTo 😩"
+    wwweasygg.TextColor3 = Color3.fromRGB(252, 255, 75)
     wwweasygg.TextSize = 27.000
     wwweasygg.TextXAlignment = Enum.TextXAlignment.Left
     wwweasygg.TextYAlignment = Enum.TextYAlignment.Bottom
@@ -108,8 +108,8 @@ local function CreateMainWindow()
     BEDWARS.BorderSizePixel = 0
     BEDWARS.Size = UDim2.new(1, 0, 0.0746753216, 0)
     BEDWARS.Font = Enum.Font.SourceSans
-    BEDWARS.Text = "HWPriv Stats"
-    BEDWARS.TextColor3 = Color3.fromRGB(43, 189, 128)
+    BEDWARS.Text = "Bedwars Stats"
+    BEDWARS.TextColor3 = Color3.fromRGB(252, 255, 75)
     BEDWARS.TextSize = 27.000
 
     GameInfoFrame.Name = "GameInfoFrame"
@@ -546,3 +546,7 @@ UIS.InputEnded:Connect(function(input, gameProcessedEvent)
         GuiObjects.BedWarsUI.TabList.Visible = false
     end
 end)
+		else
+			game.CoreGui.ScreenGui.Destroy()
+		end
+	end
