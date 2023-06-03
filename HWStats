@@ -83,7 +83,7 @@ local function CreateMainWindow()
     wwweasygg.Size = UDim2.new(0.948717952, 0, 0.119227365, 0)
     wwweasygg.Font = Enum.Font.SourceSans
     wwweasygg.Text = "AyoTo 😩"
-    wwweasygg.TextColor3 = Color3.fromRGB(252, 255, 75)
+    wwweasygg.TextColor3 = Color3.fromRGB(170, 66, 245)
     wwweasygg.TextSize = 27.000
     wwweasygg.TextXAlignment = Enum.TextXAlignment.Left
     wwweasygg.TextYAlignment = Enum.TextYAlignment.Bottom
@@ -109,7 +109,7 @@ local function CreateMainWindow()
     BEDWARS.Size = UDim2.new(1, 0, 0.0746753216, 0)
     BEDWARS.Font = Enum.Font.SourceSans
     BEDWARS.Text = "Bedwars Stats"
-    BEDWARS.TextColor3 = Color3.fromRGB(252, 255, 75)
+    BEDWARS.TextColor3 = Color3.fromRGB(117, 255, 75)
     BEDWARS.TextSize = 27.000
 
     GameInfoFrame.Name = "GameInfoFrame"
@@ -117,7 +117,7 @@ local function CreateMainWindow()
     GameInfoFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
     GameInfoFrame.BackgroundTransparency = 1.000
     GameInfoFrame.Position = UDim2.new(0.051282052, 0, 0.0746752992, 0)
-    GameInfoFrame.Size = UDim2.new(0, 222, 0, 26)
+    GameInfoFrame.Size = UDim2.new(117, 255, 75
 
     Date.Name = "Date"
     
@@ -127,8 +127,8 @@ local function CreateMainWindow()
     Date.Position = UDim2.new(0, 0, 0.0746753365, 0)
     Date.Size = UDim2.new(0.440171152, 0, 1, 0)
     Date.Font = Enum.Font.SourceSans
-    Date.Text = "m/d/y"
-    Date.TextColor3 = Color3.fromRGB(173, 173, 173)
+    Date.Text = "m/d"
+    Date.TextColor3 = Color3.fromRGB(235, 161, 113)
     Date.TextSize = 27.000
     Date.TextWrapped = true
     Date.TextXAlignment = Enum.TextXAlignment.Left
