@@ -3851,7 +3851,7 @@ runFunction(function()
 										}
 										if not killaurasync.Enabled then 
 											if animationdelay <= tick() then
-												animationdelay = tick() + 0.19
+												animationdelay = tick() + 0.019
 												if not killauraswing.Enabled then 
 													bedwars.SwordController:playSwordEffect(swordmeta)
 												end
@@ -3864,7 +3864,7 @@ runFunction(function()
 									local selfpos = selfrootpos + (killaurarange.Value > 14 and (selfrootpos - root.Position).magnitude > 14.4 and (CFrame.lookAt(selfrootpos, root.Position).lookVector * ((selfrootpos - root.Position).magnitude - 14.4)) or Vector3.zero)
 									if killaurasync.Enabled then 
 										if animationdelay <= tick() then
-											animationdelay = tick() + 0.19
+											animationdelay = tick() + 0.019
 											if not killauraswing.Enabled then 
 												bedwars.SwordController:playSwordEffect(swordmeta)
 											end
@@ -11310,7 +11310,7 @@ runFunction(function()
 end)
 
 local AnimDisabler = GuiLibrary.ObjectsThatCanBeSaved.BlatantWindow.Api.CreateOptionsButton({
-	["Name"]  = "NoAnimation",
+	["Name"]  = "AnimDisabler",
 	["Function"] = function(callback)
 		if callback then
 			pcall(function()
