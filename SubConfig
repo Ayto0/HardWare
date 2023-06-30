@@ -11308,3 +11308,26 @@ runFunction(function()
         end
     })
 end)
+
+local AnimDisabler = GuiLibrary.ObjectsThatCanBeSaved.BlatantWindow.Api.CreateOptionsButton({
+	["Name"]  = "AnimDisabler",
+	["Function"] = function(callback)
+		if callback then
+			pcall(function()
+				ScriptSettings.AnimDisabler = true
+				game:GetService("Players").LocalPlayer.Character.Animate.Disabled = true
+				while task.wait(1.5) do
+					if not ScriptSettings.AnimDisabler == true then return end
+					repeat task.wait() until game:GetService("Players").LocalPlayer.Character.Animate
+					game:GetService("Players").LocalPlayer.Character.Animate.Disabled = true
+				end
+			end)
+		else
+			pcall(function()
+				ScriptSettings.AnimDisabler = false
+				game:GetService("Players").LocalPlayer.Character.Animate.Disabled = false
+			end)
+		end
+	end,
+	["HoverText"] = "Disables your animation"
+})
