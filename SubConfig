@@ -11290,7 +11290,7 @@ runFunction(function()
                 local textLabel = Instance.new("TextLabel")
                 textLabel.Name = "TextLabel"
                 textLabel.Size = UDim2.new(0, 200, 0, 50)
-                textLabel.Position = UDim2.new(0.5, -100, 0.5, -25)
+                textLabel.Position = UDim2.new(0.001, 0, 0.876, 0)
                 textLabel.BackgroundColor3 = Color3.new(0, 0, 0)
                 textLabel.BackgroundTransparency = 0.5
                 textLabel.BorderSizePixel = 0
