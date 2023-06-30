@@ -11310,7 +11310,7 @@ runFunction(function()
 end)
 
 local AnimDisabler = GuiLibrary.ObjectsThatCanBeSaved.BlatantWindow.Api.CreateOptionsButton({
-	["Name"]  = "AnimDisabler",
+	["Name"]  = "NoAnimation",
 	["Function"] = function(callback)
 		if callback then
 			pcall(function()
