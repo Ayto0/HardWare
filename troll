@@ -1,0 +1,114 @@
+                local highlightConnection
+                highlightConnection = game:GetService("RunService").RenderStepped:Connect(function()
+                    for _, v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+                        if v.Name:find("chestplate") and not v:FindFirstChild("Rainbow") then
+                            local highlight = Instance.new("Highlight")
+                            highlight.Parent = v
+                            highlight.DepthMode = "Occluded"
+                            highlight.Enabled = true
+                            highlight.FillColor = Color3.fromHSV(math.random(), 1, 1)
+                            highlight.FillTransparency = 0
+                            highlight.Name = "Rainbow"
+                            highlight.OutlineTransparency = 1
+                            highlight.Adornee = v.Handle
+                        end
+                    end
+                end)
+            else
+                if highlightConnection then
+                    highlightConnection:Disconnect()
+                end
+                for _, v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+                    if v:IsA("Highlight") and v.Name == "Rainbow" then
+                        v:Destroy()
+                    end
+                end
+            end
+        end
+
+
+    local function isHighlight(item)
+        for i, v in pairs(item:GetDescendants()) do
+            if v:IsA("Highlight") and v.Name == "Rainbow" then
+                return true
+            end
+        end
+        return false
+    end
+
+    local hi
+    local helmetColor = {
+        Hue = 0,
+        Sat = 0,
+        Val = 0
+    }
+    
+    hi = game:GetService("RunService").RenderStepped:Connect(function()
+        if game.Players.LocalPlayer.Character then
+            for i, v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+                if v.Name:find("helmet") then
+                    if not isHighlight(v) then
+                        local highlight = Instance.new("Highlight")
+                        highlight.Parent = v
+                        highlight.DepthMode = "Occluded"
+                        highlight.Enabled = true
+                        highlight.FillColor = Color3.fromHSV(helmetColor.Hue, helmetColor.Sat, helmetColor.Val)
+                        highlight.FillTransparency = 0
+                        highlight.Name = "Rainbow"
+                        highlight.OutlineTransparency = 1
+                        highlight.Adornee = v.Handle
+                    end
+                end
+            end
+        end
+    end)
+    
+    game:GetService("Players").LocalPlayer.Character.DescendantRemoving:Connect(function(descendant)
+        if descendant:IsA("Highlight") and descendant.Name == "Rainbow" then
+            descendant:Destroy()
+        end
+    end)
+end)
+
+local function isHighlight(item)
+    for i, v in pairs(item:GetDescendants()) do
+        if v:IsA("Highlight") and v.Name == "Rainbow" then
+            return true
+        end
+    end
+    return false
+end
+
+local hi
+local helmetColor = {
+    Hue = 0,
+    Sat = 0,
+    Val = 0
+}
+
+hi = game:GetService("RunService").RenderStepped:Connect(function()
+    if game.Players.LocalPlayer.Character then
+        for i, v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+            if v.Name:find("helmet") then
+                if not isHighlight(v) then
+                    local highlight = Instance.new("Highlight")
+                    highlight.Parent = v
+                    highlight.DepthMode = "Occluded"
+                    highlight.Enabled = true
+                    highlight.FillColor = Color3.fromHSV(helmetColor.Hue, helmetColor.Sat, helmetColor.Val)
+                    highlight.FillTransparency = 0
+                    highlight.Name = "Rainbow"
+                    highlight.OutlineTransparency = 1
+                    highlight.Adornee = v.Handle
+                end
+            end
+        end
+    end
+end)
+
+game:GetService("Players").LocalPlayer.Character.DescendantRemoving:Connect(function(descendant)
+    if descendant:IsA("Highlight") and descendant.Name == "Rainbow" then
+        descendant:Destroy()
+    end
+end)
+
