@@ -7,7 +7,7 @@ pcall(function()
             if not ScriptSettings.Crosshair == true then
                 return
             end
-            mouse.Icon = cursorImageId
+            mouse.Icon = rbxassetid://14448436288
         end)
     else
         mouse.Icon = "rbxassetid://14448436288"
