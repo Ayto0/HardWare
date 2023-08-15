@@ -97,5 +97,3 @@
 
             if player.Character then
                 onCharacterAdded(player.Character)
-            end
-        end
