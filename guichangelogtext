@@ -1,89 +1,89 @@
-			local gui = Instance.new("ScreenGui")
-			gui.Name = "MyGUI"
-			gui.Parent = game.Players.LocalPlayer.PlayerGui
+local gui = Instance.new("ScreenGui")
+gui.Name = "MyGUI"
+gui.Parent = game.Players.LocalPlayer.PlayerGui
 
-			local frame = Instance.new("Frame")
-			frame.Size = UDim2.new(0, 400, 0, 450)
-			frame.Position = UDim2.new(0.5647, -100, 0.5, -75)
-			frame.AnchorPoint = Vector2.new(0.5, 0.5)
-			frame.BackgroundColor3 = Color3.new(0, 0, 0)
-			frame.BackgroundTransparency = 0.5
-			frame.BorderSizePixel = 0
-			frame.ClipsDescendants = true
-			frame.Parent = gui
+local frame = Instance.new("Frame")
+frame.Size = UDim2.new(0, 400, 0, 450)
+frame.Position = UDim2.new(0.5647, -100, 0.5, -75)
+frame.AnchorPoint = Vector2.new(0.5, 0.5)
+frame.BackgroundColor3 = Color3.new(0, 0, 0)
+frame.BackgroundTransparency = 0.5
+frame.BorderSizePixel = 0
+frame.ClipsDescendants = true
+frame.Parent = gui
 
-			local cornerStyle = Instance.new("UICorner")
-			cornerStyle.CornerRadius = UDim.new(0, 10)
-			cornerStyle.Parent = frame
+local cornerStyle = Instance.new("UICorner")
+cornerStyle.CornerRadius = UDim.new(0, 10)
+cornerStyle.Parent = frame
 
-			local hardwareLabel = Instance.new("TextLabel")
-			hardwareLabel.Text = "HardWare"
-			hardwareLabel.Size = UDim2.new(1, 0, 0, 30)
-			hardwareLabel.Position = UDim2.new(0, 0, 0, 0)
-			hardwareLabel.BackgroundTransparency = 1
-			hardwareLabel.TextColor3 = Color3.new(1, 1, 1)
-			hardwareLabel.TextSize = 30
-			hardwareLabel.Font = Enum.Font.SourceSansBold
-			hardwareLabel.Parent = frame
+local hardwareLabel = Instance.new("TextLabel")
+hardwareLabel.Text = "HardWare"
+hardwareLabel.Size = UDim2.new(1, 0, 0, 30)
+hardwareLabel.Position = UDim2.new(0, 0, 0, 0)
+hardwareLabel.BackgroundTransparency = 1
+hardwareLabel.TextColor3 = Color3.new(1, 1, 1)
+hardwareLabel.TextSize = 30
+hardwareLabel.Font = Enum.Font.SourceSansBold
+hardwareLabel.Parent = frame
 
-			local changelogLabel = Instance.new("TextLabel")
-			changelogLabel.Text = "Changelog"
-			changelogLabel.Size = UDim2.new(1, 0, 0, 30)
-			changelogLabel.Position = UDim2.new(0, 0, 0.27, -1)
-			changelogLabel.BackgroundTransparency = 1
-			changelogLabel.TextColor3 = Color3.new(1, 1, 1)
-			changelogLabel.TextSize = 23
-			changelogLabel.Font = Enum.Font.SourceSansBold
-			changelogLabel.Parent = frame
+local changelogLabel = Instance.new("TextLabel")
+changelogLabel.Text = "Changelog"
+changelogLabel.Size = UDim2.new(1, 0, 0, 30)
+changelogLabel.Position = UDim2.new(0, 0, 0.27, -1)
+changelogLabel.BackgroundTransparency = 1
+changelogLabel.TextColor3 = Color3.new(1, 1, 1)
+changelogLabel.TextSize = 23
+changelogLabel.Font = Enum.Font.SourceSansBold
+changelogLabel.Parent = frame
 
-			local loadchangeloglistlabel = Instance.new("TextLabel")
-			loadchangeloglistlabel.Text = "+ Added ChangeLog 🥳\n+ More QOL Changes 🥳\n+ Added Extra Speed if your holding scythe ✅\n= BetterBypass > FireWallBypassHelper ✅ \n+ Added PlayerIdentification 🥳\n- Removed Old StartUp Notifications ❌\n+ Added Modes to InfiniteJump ✅"
-			loadchangeloglistlabel.Size = UDim2.new(0.9, 0, 0.5, 0)
-			loadchangeloglistlabel.Position = UDim2.new(0.05, 0, 0.25, 0)
-			loadchangeloglistlabel.BackgroundTransparency = 1
-			loadchangeloglistlabel.TextColor3 = Color3.new(1, 1, 1)
-			loadchangeloglistlabel.TextSize = 20
-			loadchangeloglistlabel.Font = Enum.Font.SourceSans
-			loadchangeloglistlabel.TextWrapped = true
-			loadchangeloglistlabel.Parent = frame
+local loadchangeloglistlabel = Instance.new("TextLabel")
+loadchangeloglistlabel.Text = "+ Added PlayerIdentification 🥳\n+ TimeChanger🥳\n+ Added ChangeLog 🥳\n+ More QOL Changes 🥳\n+ Added Extra Speed if your holding scythe ✅\n+ Added Modes to InfiniteJump ✅\n= BetterBypass > FireWallBypassHelper ✅\n- Removed Old StartUp Notifications ❌"
+loadchangeloglistlabel.Size = UDim2.new(0.9, 0, 0.5, 0)
+loadchangeloglistlabel.Position = UDim2.new(0.05, 0, 0.25, 0)
+loadchangeloglistlabel.BackgroundTransparency = 1
+loadchangeloglistlabel.TextColor3 = Color3.new(1, 1, 1)
+loadchangeloglistlabel.TextSize = 20
+loadchangeloglistlabel.Font = Enum.Font.SourceSans
+loadchangeloglistlabel.TextWrapped = true
+loadchangeloglistlabel.Parent = frame
 
-			local loadupdatelabel = Instance.new("TextLabel")
-			loadupdatelabel.Text = "Last Updated 8/15/23"
-			loadupdatelabel.Size = UDim2.new(1, 0, 0, 30)
-			loadupdatelabel.Position = UDim2.new(0, 0, 0, 385)
-			loadupdatelabel.BackgroundTransparency = 1
-			loadupdatelabel.TextColor3 = Color3.new(1, 1, 1)
-			loadupdatelabel.TextSize = 16
-			loadupdatelabel.Font = Enum.Font.SourceSansBold
-			loadupdatelabel.Parent = frame
+local loadupdatelabel = Instance.new("TextLabel")
+loadupdatelabel.Text = "Last Updated 8/15/23"
+loadupdatelabel.Size = UDim2.new(1, 0, 0, 30)
+loadupdatelabel.Position = UDim2.new(0, 0, 0, 385)
+loadupdatelabel.BackgroundTransparency = 1
+loadupdatelabel.TextColor3 = Color3.new(1, 1, 1)
+loadupdatelabel.TextSize = 16
+loadupdatelabel.Font = Enum.Font.SourceSansBold
+loadupdatelabel.Parent = frame
 
-			local closeButton = Instance.new("TextButton")
-			closeButton.Text = "X"
-			closeButton.Size = UDim2.new(0, 30, 0, 30)
-			closeButton.Position = UDim2.new(1, -30, 0, 0)
-			closeButton.BackgroundColor3 = Color3.new(1, 0, 0)
-			closeButton.TextColor3 = Color3.new(1, 1, 1)
-			closeButton.Parent = frame
+local closeButton = Instance.new("TextButton")
+closeButton.Text = "X"
+closeButton.Size = UDim2.new(0, 30, 0, 30)
+closeButton.Position = UDim2.new(1, -30, 0, 0)
+closeButton.BackgroundColor3 = Color3.new(1, 0, 0)
+closeButton.TextColor3 = Color3.new(1, 1, 1)
+closeButton.Parent = frame
 
-			local function closeGui()
-				gui:Destroy()
-			end
+local function closeGui()
+    gui:Destroy()
+end
 
-			closeButton.MouseButton1Click:Connect(closeGui)
+closeButton.MouseButton1Click:Connect(closeGui)
 
-			local countdownDuration = 2
-			local countdownLabel = Instance.new("TextLabel")
-			countdownLabel.Size = UDim2.new(1, 0, 0, 30)
-			countdownLabel.Position = UDim2.new(0, 0, 0, 415)
-			countdownLabel.BackgroundTransparency = 1
-			countdownLabel.TextColor3 = Color3.new(1, 1, 1)
-			countdownLabel.TextSize = 18
-			countdownLabel.Font = Enum.Font.SourceSansBold
-			countdownLabel.Parent = frame
+local countdownDuration = 2
+local countdownLabel = Instance.new("TextLabel")
+countdownLabel.Size = UDim2.new(1, 0, 0, 30)
+countdownLabel.Position = UDim2.new(0, 0, 0, 415)
+countdownLabel.BackgroundTransparency = 1
+countdownLabel.TextColor3 = Color3.new(1, 1, 1)
+countdownLabel.TextSize = 18
+countdownLabel.Font = Enum.Font.SourceSansBold
+countdownLabel.Parent = frame
 
-			for seconds = countdownDuration, 1, -1 do
-				countdownLabel.Text = string.format("Ommi gonna bust in %d seconds", seconds)
-				wait(1)
-			end
+for seconds = countdownDuration, 1, -1 do
+    countdownLabel.Text = string.format("Ommi gonna bust in %d seconds", seconds)
+    wait(1)
+end
 
-			countdownLabel:Destroy()
+countdownLabel:Destroy()
