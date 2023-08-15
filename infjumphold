@@ -1,0 +1,27 @@
+local player = game.Players.LocalPlayer
+local character = player.Character
+local humanoid = character:WaitForChild("Humanoid")
+
+local jumping = false
+
+game:GetService("UserInputService").InputBegan:Connect(function(input)
+    if input.KeyCode == Enum.KeyCode.Space and humanoid:GetState() == Enum.HumanoidStateType.Physics then
+        jumping = true
+        while jumping and humanoid:GetState() == Enum.HumanoidStateType.Physics do
+            humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+            wait(0.1)
+        end
+    end
+end)
+
+game:GetService("UserInputService").InputEnded:Connect(function(input)
+    if input.KeyCode == Enum.KeyCode.Space then
+        jumping = false
+    end
+end)
+
+humanoid:GetPropertyChangedSignal("State"):Connect(function()
+    if humanoid:GetState() == Enum.HumanoidStateType.Seated then
+        jumping = false
+    end
+end)

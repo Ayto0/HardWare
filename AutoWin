@@ -1,3 +1,0 @@
-			local textChatService = game:GetService("TextChatService")
-            wait(0.0001)
-            textChatService.ChatInputBarConfiguration.TargetTextChannel:SendAsync("ily")
