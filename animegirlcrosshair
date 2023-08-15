@@ -1,0 +1,16 @@
+            pcall(function()
+                local mouse = game:GetService("Players").LocalPlayer:GetMouse()
+                mouse.Icon = cursorImageId
+                
+                mouse:GetPropertyChangedSignal("Icon"):Connect(function()
+                    if not ScriptSettings.Crosshair == true then
+                        return
+                    end
+                    mouse.Icon = cursorImageId
+                end)
+            end)
+        else
+            pcall(function()
+                local mouse = game:GetService("Players").LocalPlayer:GetMouse()
+                mouse.Icon = "rbxassetid://14448587570"
+            end)
