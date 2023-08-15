@@ -91,7 +91,7 @@
             countdownLabel.Position = UDim2.new(0, 0, 0, 415)
             countdownLabel.BackgroundTransparency = 1
             countdownLabel.TextColor3 = Color3.new(1, 1, 1)
-            countdownLabel.TextSize = 18
+            countdownLabel.TextSize = 19
             countdownLabel.Font = Enum.Font.SourceSansBold
             countdownLabel.Parent = frame
 
