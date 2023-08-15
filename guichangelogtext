@@ -37,7 +37,7 @@ changelogLabel.Font = Enum.Font.SourceSansBold
 changelogLabel.Parent = frame
 
 local loadchangeloglistlabel = Instance.new("TextLabel")
-loadchangeloglistlabel.Text = "+ Added PlayerIdentification 🥳\n+ TimeChanger🥳\n+ Added ChangeLog 🥳\n+ More QOL Changes 🥳\n+ Added Extra Speed if your holding scythe ✅\n+ Added Modes to InfiniteJump ✅\n= BetterBypass > FireWallBypassHelper ✅\n- Removed Old StartUp Notifications ❌"
+loadchangeloglistlabel.Text = "+ Added PlayerIdentification 🥳\n+ Added TimeChanger🥳\n+ Added ChangeLog 🥳\n+ More QOL Changes 🥳\n+ Added Extra Speed if your holding scythe ✅\n+ Added Modes to InfiniteJump ✅\n= BetterBypass > FireWallBypassHelper ✅\n- Removed Old StartUp Notifications ❌"
 loadchangeloglistlabel.Size = UDim2.new(0.9, 0, 0.5, 0)
 loadchangeloglistlabel.Position = UDim2.new(0.05, 0, 0.25, 0)
 loadchangeloglistlabel.BackgroundTransparency = 1
