@@ -82,7 +82,7 @@
 			countdownLabel.Parent = frame
 
 			for seconds = countdownDuration, 1, -1 do
-				countdownLabel.Text = string.format("Ommi gonna bust in %d seconds", seconds)
+				countdownLabel.Text = string.format("In Develop rn :)", seconds)
 				wait(1)
 			end
 
