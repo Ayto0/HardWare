@@ -39,7 +39,7 @@
                 rings.BrickColor = BrickColor.new(color)
                 rings.Anchored = true
                 rings.CanCollide = false
-                rings.Transparency = 0.84135456
+                rings.Transparency = 0.83135456
 
                 local offset = Vector3.new(0, distance, 0)
                 rings.Position = character.HumanoidRootPart.Position + offset
@@ -97,3 +97,5 @@
 
             if player.Character then
                 onCharacterAdded(player.Character)
+            end
+        end
