@@ -60,15 +60,25 @@
             loadupdatelabel.Font = Enum.Font.SourceSansBold
             loadupdatelabel.Parent = frame
 
-            local closeButton = Instance.new("TextButton")
-            closeButton.Text = "X"
-            closeButton.Size = UDim2.new(0, 30, 0, 30)
-            closeButton.Position = UDim2.new(1, -30, 0, 0)
-            closeButton.BackgroundTransparency = 1
-            closeButton.TextColor3 = Color3.new(1, 1, 1)
+			local closeButton = Instance.new("TextButton")
+			closeButton.Text = "X"
+			closeButton.Size = UDim2.new(0, 30, 0, 30)
+			closeButton.Position = UDim2.new(1, -30, 0, 0)
+			closeButton.BackgroundTransparency = 1
+			closeButton.TextColor3 = Color3.new(1, 1, 1)
 			closeButton.Font = Enum.Font.SourceSansBold
 			closeButton.TextSize = 20
-            closeButton.Parent = frame
+			closeButton.Parent = frame
+		
+			local clickSoundId = "rbxassetid://6732690176"
+			local clickSound = Instance.new("Sound")
+			clickSound.SoundId = clickSoundId
+			clickSound.Parent = game.Workspace
+		
+			closeButton.MouseButton1Click:Connect(function()
+				clickSound:Play()
+				gui:Destroy()
+			end)
 
             local function closeGui()
                 gui:Destroy()
@@ -100,20 +110,29 @@
 			infoButton.TextSize = 17
 			infoButton.Parent = frame
 			
-			local infoGui = Instance.new("Frame")
-			infoGui.Size = UDim2.new(0, 300, 0, 300)
-			infoGui.Position = UDim2.new(0.58, 100, 0.3, -75)
-			infoGui.BackgroundColor3 = Color3.new(0, 0, 0)
-			infoGui.BackgroundTransparency = 0.5
-			infoGui.BorderSizePixel = 0
-			infoGui.ClipsDescendants = true
-			infoGui.Visible = false
-			infoGui.Parent = gui
-
+			local clickSoundId = "rbxassetid://6732690176"
+			local clickSound = Instance.new("Sound")
+			clickSound.SoundId = clickSoundId
+			clickSound.Parent = game.Workspace
+			
+			infoButton.MouseButton1Click:Connect(function()
+				clickSound:Play()
+			
+				local infoGui = Instance.new("Frame")
+				infoGui.Size = UDim2.new(0, 300, 0, 300)
+				infoGui.Position = UDim2.new(0.58, 100, 0.3, -75)
+				infoGui.BackgroundColor3 = Color3.new(0, 0, 0)
+				infoGui.BackgroundTransparency = 0.5
+				infoGui.BorderSizePixel = 0
+				infoGui.ClipsDescendants = true
+				infoGui.Visible = false
+				infoGui.Parent = game.Players.LocalPlayer.PlayerGui
+			end)
+			
 			local cornerStyle = Instance.new("UICorner")
-			cornerStyle.CornerRadius = UDim.new(0, 10)  
+			cornerStyle.CornerRadius = UDim.new(0, 10)
 			cornerStyle.Parent = infoGui
-
+			
 			local closeButton2 = Instance.new("TextButton")
 			closeButton2.Text = "X"
 			closeButton2.Size = UDim2.new(0, 30, 0, 30)
@@ -124,6 +143,16 @@
 			closeButton2.Font = Enum.Font.SourceSansBold
 			closeButton2.TextSize = 20
 			closeButton2.Parent = infoGui
+
+			local clickSoundId = "rbxassetid://6732690176"
+			local clickSound = Instance.new("Sound")
+			clickSound.SoundId = clickSoundId
+			clickSound.Parent = game.Workspace
+
+			closeButton2.MouseButton1Click:Connect(function()
+ 			   clickSound:Play()
+ 			   infoGui:Destroy()
+			end)
 			
 			local infoLabel = Instance.new("TextLabel")
 			infoLabel.Text = "Extra ChangeLog"
