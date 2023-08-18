@@ -1,0 +1,40 @@
+				task.spawn(function()
+					repeat task.wait() until matchState ~= 0
+					local A = game:GetService("Players").LocalPlayer.Character
+					local head = A.Head
+					repeat task.wait() until head.LocalTransparencyModifier ~= trasnparency2 
+					local A = game:GetService("Players").LocalPlayer.Character
+					local head = A.Head
+					local LeftFoot = A.LeftFoot
+					local lefthand = A.LeftHand
+					local leftlowerarm = A.LeftLowerArm
+					local leftlowerleg = A.LeftLowerLeg
+					local leftupperarm = A.LeftUpperArm
+					local leftupperleg = A.LeftUpperLeg
+					local lowertorso = A.LowerTorso
+					local rightfoot = A.RightFoot
+					local Righthand = A.RightHand
+					local Rightlowerarm = A.RightLowerArm
+					local Rightlowerleg = A.RightLowerLeg
+					local RightUpperarm = A.RightUpperArm
+					local RightUpperLeg = A.RightUpperLeg
+					local UpperTorso = A.UpperTorso
+					transparent = true
+					repeat task.wait()
+						head.LocalTransparencyModifier = trasnparency2
+						LeftFoot.LocalTransparencyModifier = trasnparency2
+						lefthand.LocalTransparencyModifier = trasnparency2
+						leftlowerarm.LocalTransparencyModifier = trasnparency2
+						leftlowerleg.LocalTransparencyModifier = trasnparency2
+						leftupperarm.LocalTransparencyModifier = trasnparency2
+						leftupperleg.LocalTransparencyModifier = trasnparency2
+						lowertorso.LocalTransparencyModifier = trasnparency2
+						rightfoot.LocalTransparencyModifier = trasnparency2
+						Righthand.LocalTransparencyModifier = trasnparency2
+						Rightlowerarm.LocalTransparencyModifier = trasnparency2
+						Rightlowerleg.LocalTransparencyModifier = trasnparency2
+						RightUpperarm.LocalTransparencyModifier = trasnparency2
+						RightUpperLeg.LocalTransparencyModifier = trasnparency2
+						UpperTorso.LocalTransparencyModifier = trasnparency2
+					until transparent == false
+				end)
