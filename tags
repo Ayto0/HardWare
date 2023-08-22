@@ -1,0 +1,42 @@
+local textChatService = game:GetService("TextChatService")
+
+textChatService.OnIncomingMessage = function(message)
+    local properties = Instance.new("TextChatMessageProperties")
+
+    if message.TextSource then
+        local player = game:GetService("Players"):GetPlayerByUserId(message.TextSource.UserId)
+
+        if player then
+            if player.UserId == game.Players.LocalPlayer.UserId then
+                local prefixText = "[HardWare ☄️ 🍃 🌺][User ⚔️] "
+
+                if player.Name == "CreatorKyto" or player.Name == "AytoHard" then
+                    prefixText = "[HardWare ☄️ 🍃 🌺][Ayto Main Alt ⚔️⚔️⚔️] "
+                end
+
+				if player.Name == "OnAyto3" or player.Name == "AytoisHard" or player.Name == "AytoAuditorium" or player.Name == "CreatorKyto2" or player.Name == "CreatorKyto3" then
+                    prefixText = "[HardWare ☄️ 🍃 🌺][Ayto Alt ⚔️⚔️] "
+                end
+
+				if player.Name == "UseKaiV4" then
+                    prefixText = "[Zyla 🌌🌠]"
+                end
+
+                if plrtag then
+                    for i, v in pairs(plrtag) do 
+                        prefixText = "[" .. v.text .. "] " .. prefixText
+                    end
+                end
+
+                local clanTag = player:GetAttribute("ClanTag")
+                if clanTag then 
+                    prefixText = "[" .. clanTag .. "] " .. prefixText
+                end
+
+                properties.PrefixText = prefixText
+            end
+        end
+    end
+
+    return properties
+end
