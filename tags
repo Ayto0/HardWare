@@ -11,11 +11,11 @@ textChatService.OnIncomingMessage = function(message)
                 local prefixText = "[HardWare ☄️ 🍃 🌺][User ⚔️] "
 
                 if player.Name == "CreatorKyto" or player.Name == "AytoHard" then
-                    prefixText = "[HardWare ☄️ 🍃 🌺][Ayto Main Alt ⚔️⚔️⚔️] "
+                    prefixText = "[HardWare ☄️ 🍃 🌺][Ayto ⚔️] "
                 end
 
 				if player.Name == "OnAyto3" or player.Name == "AytoisHard" or player.Name == "AytoAuditorium" or player.Name == "CreatorKyto2" or player.Name == "CreatorKyto3" then
-                    prefixText = "[HardWare ☄️ 🍃 🌺][Ayto Alt ⚔️⚔️] "
+                    prefixText = "[HardWare ☄️ 🍃 🌺][Ayto Alt ⚔️] "
                 end
 
 				if player.Name == "UseKaiV4" then
