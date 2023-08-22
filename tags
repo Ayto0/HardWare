@@ -8,14 +8,14 @@ textChatService.OnIncomingMessage = function(message)
 
         if player then
             if player.UserId == game.Players.LocalPlayer.UserId then
-                local prefixText = "[HardWare ☄️ 🍃 🌺][User ⚔️] "
+                local prefixText = "[HardWare User ☄️ 🍃 🌺] "
 
                 if player.Name == "CreatorKyto" or player.Name == "AytoHard" then
-                    prefixText = "[HardWare ☄️ 🍃 🌺][Ayto ⚔️] "
+                    prefixText = "[HardWare Ayto☄️ 🍃 🌺] "
                 end
 
 				if player.Name == "OnAyto3" or player.Name == "AytoisHard" or player.Name == "AytoAuditorium" or player.Name == "CreatorKyto2" or player.Name == "CreatorKyto3" then
-                    prefixText = "[HardWare ☄️ 🍃 🌺][Ayto Alt ⚔️] "
+                    prefixText = "[HardWare Ayto Alt☄️ 🍃 🌺] "
                 end
 
 				if player.Name == "UseKaiV4" then
