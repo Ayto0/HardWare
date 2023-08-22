@@ -23,9 +23,11 @@ textChatService.OnIncomingMessage = function(message)
                 end
 
                 if plrtag then
+                    local playerTags = ""
                     for i, v in pairs(plrtag) do 
-                        prefixText = "[" .. v.text .. "] " .. prefixText
+                        playerTags = "[" .. v.text .. "] " .. playerTags
                     end
+                    prefixText = playerTags .. prefixText
                 end
 
                 local clanTag = player:GetAttribute("ClanTag")
