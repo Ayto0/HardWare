@@ -45,7 +45,7 @@ changelogLabel.Font = Enum.Font.SourceSansBold
 changelogLabel.Parent = frame
 
 local loadchangeloglistlabel = Instance.new("TextLabel")
-loadchangeloglistlabel.Text = "Changed Hard Client to HardWare \n + Added some AutoToxic \n+ Added ChatTags \n+ Added 16xPack, by 4zze \n- Removed DisablerTweenDash "
+loadchangeloglistlabel.Text = "Changed Hard Client to HardWare \n + InvisExploit\n + Added some AutoToxic \n+ Added ChatTags \n+ Added 16xPack, by 4zze \n- Removed DisablerTweenDash "
 loadchangeloglistlabel.Size = UDim2.new(0.9, 0, 0.5, 0)
 loadchangeloglistlabel.Position = UDim2.new(0.05, 0, 0.25, 0)
 loadchangeloglistlabel.BackgroundTransparency = 1
