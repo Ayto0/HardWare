@@ -159,7 +159,7 @@ infoLabel.TextSize = 22
 infoLabel.Parent = infoGui
 
 local textinfoLabel = Instance.new("TextLabel")
-textinfoLabel.Text = "+ Script Changes\n + Made ChinaHat go to the side \n+ TweenDash Max 21 to 100\n+ TweenDashSpeed 0.419 > 0.5 (seconds)\n+ Increased Scythe Speed \n = Renamed PlayerIdentification to StarterStuff \n= FireWallBypassHelper to FireWallBypass2\n = Optimized TweenDash for Disabler"
+textinfoLabel.Text = "+ Script Changes\n + Made ChinaHat go to the side \n+ TweenDash Max 21 to 100\n+ TweenDashSpeed 0.419 > 0.5 (seconds)\n+ Scythe Speed 12.3 > 15.5\n = Renamed PlayerIdentification to StarterStuff \n= FireWallBypassHelper to FireWallBypass2\n = Optimized TweenDash for Disabler"
 textinfoLabel.Size = UDim2.new(1, 0, 1, 0)
 textinfoLabel.Position = UDim2.new(0, 0.5, 0, -1)
 textinfoLabel.BackgroundColor3 = Color3.new(0, 0, 0)
