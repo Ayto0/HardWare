@@ -1,0 +1,87 @@
+
+    local lplr = game.Players.LocalPlayer
+    local Character = lplr.Character or lplr.CharacterAdded:Wait()
+    local HumanoidRootPart = Character:WaitForChild("HumanoidRootPart")
+
+    local AutoWinBoolean = false
+
+    function AutoWin()
+        Player.CharacterAdded:Connect(function()
+            wait(0.3)
+            local NearestBed = FindNearestBed()
+            local TeamOfBedPlayer = nil
+            if NearestBed and AutoWinBoolean == true and GetMatchState() == 1 and Player.leaderstats.Bed.Value == "✅" then
+                TweenToNearestBed()
+                local TeamColor = NearestBed:FindFirstChild("Covers").BrickColor
+                for i, v in pairs(game.Players:GetChildren()) do
+                    if v.Team ~= Player.Team and v ~= Player then
+                        if v.TeamColor == TeamColor then
+                            TeamOfBedPlayer = v
+                        end
+                    end
+                end
+
+                repeat
+                    task.wait()
+                    if not TeamOfBedPlayer then
+                        task.wait(4)
+                        KillHumanoid(0)
+                    end
+                    if not IsNetworkOwner(Player.Character.HumanoidRootPart) then
+                        KillHumanoid(0)
+                    end
+                    if TeamOfBedPlayer then
+                        if TeamOfBedPlayer.leaderstats.Bed.Value ~= "✅" then
+                            KillHumanoid(0)
+                        end
+                    end
+                until TeamOfBedPlayer.leaderstats.Bed.Value ~= "✅" or Player.Character.Humanoid.Health <= 0
+                KillHumanoid(0)
+            else
+                if not FindNearestBed() and AutoWinBoolean == true and GetMatchState() == 1 and Player.leaderstats.Bed.Value == "✅" then
+                    local NearestPlayer = FindNearestPlayer()
+                    local KillsValue = Player.leaderstats.Kills.Value
+
+                    local Number = 0
+
+                    if NearestPlayer then
+                        TweenToNearestPlayer(NearestPlayer)
+                        task.wait(0.7)
+                    end
+
+                    if not IsNetworkOwner(Player.Character.HumanoidRootPart) then
+                        KillHumanoid(0)
+                    end
+
+                    repeat
+                        if NearestPlayer and KillsValue <= Player.leaderstats.Kills.Value and Number < 20 then
+                            task.wait(1)
+                            TweenToNearestPlayerSlow(NearestPlayer)
+                            Number = Number + 1
+                        else
+                            if KillsValue < Player.leaderstats.Kills.Value then
+                                KillHumanoid(0)
+                            end
+                        end
+                        if not IsNetworkOwner(Player.Character.HumanoidRootPart) then
+                            KillHumanoid(0)
+                        end
+                        if not NearestPlayer or Number >= 20 then
+                            KillHumanoid(0)
+                        end
+                    until Player.leaderstats.Kills.Value ~= KillsValue or Player.Character.Humanoid.Health <= 0 or not NearestPlayer
+                    KillHumanoid(0)
+                end
+            end
+        end)
+        RunService.Heartbeat:Connect(function()
+            if AutoWinBoolean == true and Character and Humanoid.Health > 0 and FindNearestBed() and GetMatchState() == 1 then
+                KillHumanoid(0)
+                task.wait(0.7)
+                ChatMakeSystemMessage("Death tp started!")
+            end
+        end)
+    end
+
+    AutoWin()
+end
