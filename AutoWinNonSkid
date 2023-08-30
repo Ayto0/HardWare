@@ -199,7 +199,7 @@ bedwars = {
 			local RunService = game:GetService("RunService")
 			
 			local AutoWinBoolean = false
-			local ChaseSpeedValue = 15
+			local ChaseSpeedValue = 14
 			
 			
 			function GetRemote(Tab)
@@ -278,7 +278,7 @@ bedwars = {
 			
 			function TweenToNearestPlayer(NearestPlayer)
 				if NearestPlayer then
-					local TweenTime = 0.65
+					local TweenTime = 0.7
 					local TweenInformation = TweenInfo.new(TweenTime, Enum.EasingStyle.Linear, Enum.EasingDirection.In, 0, false, 0)
 					local PlayerTween = TweenService:Create(Player.Character.HumanoidRootPart, TweenInformation, {CFrame = NearestPlayer.Character.HumanoidRootPart.CFrame})
 					if NearestPlayer.Character.Humanoid.Health > 0 then
@@ -304,7 +304,7 @@ bedwars = {
 			function TweenToNearestBed()
 				local NearestBed = FindNearestBed()
 				if NearestBed then
-					local TweenTime = 0.65
+					local TweenTime = 0.7
 					local TweenInformation = TweenInfo.new(TweenTime, Enum.EasingStyle.Linear, Enum.EasingDirection.In, 0, false, 0)
 					local BedTween = TweenService:Create(Player.Character.HumanoidRootPart, TweenInformation, {CFrame = NearestBed.CFrame + Vector3.new(0, 10, 0)})
 					BedTween:Play()
