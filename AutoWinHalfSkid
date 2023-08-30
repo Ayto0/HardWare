@@ -398,7 +398,6 @@ bedwars = {
 			
 			AutoWinBoolean = true
 			AutoWin()
-			AutoWin.ToggleButton(false)
 			
 			Higher.Activated:Connect(function()
 				if ChaseSpeedValue <= 14 then
