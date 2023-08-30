@@ -6,7 +6,7 @@ local spheres = {}  -- Store created spheres here
 
 local function CreateFloatingSphere(parent, offset)
     local sphere = Instance.new("Part")
-    sphere.Size = Vector3.new(2.5, 2.5, 2.5)
+    sphere.Size = Vector3.new(3.5, 3.5, 3.5)
     sphere.Shape = Enum.PartType.Ball
     sphere.BrickColor = BrickColor.new("Black")
     sphere.Anchored = true
@@ -16,8 +16,8 @@ local function CreateFloatingSphere(parent, offset)
 
     local function UpdatePosition()
         local rotation = CFrame.Angles(0, tick() * 1, 0)  -- Adjust the rotation speed
-        local radius = 5  -- Adjust the radius of the circle
-        local angle = math.rad(offset + (360 / #spheres) * (tick() * 10 % 360))  -- Adjust rotation speed
+        local radius = 18  -- Adjust the radius of the circle
+        local angle = math.rad(offset + (360 / #spheres) * (tick() * 3.5 % 360))  -- Adjust rotation speed
         local x = humanoidRootPart.Position.x + radius * math.cos(angle)
         local z = humanoidRootPart.Position.z + radius * math.sin(angle)
         local newPosition = Vector3.new(x, humanoidRootPart.Position.y + 0, z)
@@ -38,7 +38,7 @@ local function CreateFloatingSphere(parent, offset)
     return sphere
 end
 
-local numSpheres = 6  -- Adjust the number of spheres
+local numSpheres = 10  -- Adjust the number of spheres
 for i = 1, numSpheres do
     local offset = (i - 1) * (360 / numSpheres)
     local sphere = CreateFloatingSphere(game.Workspace, offset)
