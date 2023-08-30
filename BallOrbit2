@@ -8,7 +8,7 @@ local function CreateFloatingSphere(parent, offset)
     local sphere = Instance.new("Part")
     sphere.Size = Vector3.new(3.5, 3.5, 3.5)
     sphere.Shape = Enum.PartType.Ball
-    sphere.BrickColor = BrickColor.new("Turquoise")
+    sphere.BrickColor = BrickColor.new("Black")
     sphere.Anchored = true
     sphere.CanCollide = false
     sphere.Transparency = 0.1
