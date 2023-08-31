@@ -18,10 +18,10 @@ local function CreateFloatingSphere(parent, offset)
     local function UpdatePosition()
         local rotation = CFrame.Angles(0, tick() * 1, 0)  -- Adjust the rotation speed
         local radius = 1  -- Adjust the radius of the circle
-        local angle = math.rad(offset + (360 / #spheres) * (tick() * 1 % 360))  -- Adjust rotation speed
+        local angle = math.rad(offset + (360 / #spheres) * (tick() * 3 % 360))  -- Adjust rotation speed
         local x = humanoidRootPart.Position.x + radius * math.cos(angle)
         local z = humanoidRootPart.Position.z + radius * math.sin(angle)
-        local newPosition = Vector3.new(x, humanoidRootPart.Position.y + 2.5, z)
+        local newPosition = Vector3.new(x, humanoidRootPart.Position.y + 2.8, z)
         sphere.CFrame = CFrame.new(newPosition) * rotation
     end
 
@@ -39,7 +39,7 @@ local function CreateFloatingSphere(parent, offset)
     return sphere
 end
 
-local numSpheres = 10  -- Adjust the number of spheres
+local numSpheres = 20  -- Adjust the number of spheres
 for i = 1, numSpheres do
     local offset = (i - 1) * (360 / numSpheres)
     local sphere = CreateFloatingSphere(game.Workspace, offset)
