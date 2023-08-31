@@ -45,7 +45,7 @@ changelogLabel.Font = Enum.Font.SourceSansBold
 changelogLabel.Parent = frame
 
 local loadchangeloglistlabel = Instance.new("TextLabel")
-loadchangeloglistlabel.Text = " Added ChatColor \n AutoWinHalfSkidded \n Added BallOrbit \n Added Custom (Window) \n Removed Hard (Window) \n Removed Ware (Window)\n  Removed 16xPack \n  Put Coordinates at the top, middle \n  Made Coordinates AutoExec"
+loadchangeloglistlabel.Text = " Added ChatColor \n AutoWinHalfSkidded \n Added BallOrbit \n Added Halo\n Added Custom (Window) \n Removed Hard (Window) \n Removed Ware (Window)\n  Removed 16xPack \n  Put Coordinates at the top, middle \n  Made Coordinates AutoExec"
 loadchangeloglistlabel.Size = UDim2.new(0.9, 0, 0.5, 0)
 loadchangeloglistlabel.Position = UDim2.new(0.05, 0, 0.25, 0)
 loadchangeloglistlabel.BackgroundTransparency = 1
@@ -56,7 +56,7 @@ loadchangeloglistlabel.TextWrapped = true
 loadchangeloglistlabel.Parent = frame
 
 local loadcreditlabel = Instance.new("TextLabel")
-loadcreditlabel.Text = "🌠 Made by Ayto/ky 🌠"
+loadcreditlabel.Text = "🌠 Made by Ayto 🌠"
 loadcreditlabel.Size = UDim2.new(1, 0, 0, 30)
 loadcreditlabel.Position = UDim2.new(0, 0, 0, 385)
 loadcreditlabel.BackgroundTransparency = 1
