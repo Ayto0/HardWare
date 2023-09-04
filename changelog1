@@ -45,7 +45,7 @@ changelogLabel.Font = Enum.Font.SourceSansBold
 changelogLabel.Parent = frame
 
 local loadchangeloglistlabel = Instance.new("TextLabel")
-loadchangeloglistlabel.Text = " Added ChatColor \n AutoWin \n Added Halo \n Changed Vape Notifications \n Changes Vape Window Backgrounds\n Added Custom (Window) \n Removed Hard (Window) \n Removed Ware (Window)\n  Removed 16xPack \n  Made Coordinates AutoExec"
+loadchangeloglistlabel.Text = " Added ChatColor \n AutoWin \n Added Halo \n Changed Vape Notifications \n Changes Vape Window Backgrounds\n Added Custom (Window) \n Removed Hard (Window) \n Removed Ware (Window)\n  Removed 16xPack  \n Removed RBGear (breaks vape)\n  Made Coordinates AutoExec"
 loadchangeloglistlabel.Size = UDim2.new(0.9, 0, 0.5, 0)
 loadchangeloglistlabel.Position = UDim2.new(0.05, 0, 0.25, 0)
 loadchangeloglistlabel.BackgroundTransparency = 1
@@ -159,7 +159,7 @@ infoLabel.TextSize = 22
 infoLabel.Parent = infoGui
 
 local textinfoLabel = Instance.new("TextLabel")
-textinfoLabel.Text = " More Script Changes \n AutoExec cursor to KurumiCursor \n Changed several fonts to LuckiestGuy\n Renamed VelocityHighJump to VelocityJump \n TimeChanger to LightingChanger \n Added more settings to LightingChanger \n Removed the starter notification when executing vape \n Put Coordinates at Top, Middle\n Gave Coordinates GUI Cornors \n Lowered TweenDash distance, 100 to 50 \n QOL Changes to TweenDash"
+textinfoLabel.Text = " More Script Changes \n RBSpawnESP to SpawnESP \n Gace SpawnESP a color slider\n AutoExec cursor to KurumiCursor \n Changed several fonts to LuckiestGuy\n Renamed VelocityHighJump to VelocityJump \n TimeChanger to LightingChanger \n Added more settings to LightingChanger \n Removed the starter notification when executing vape \n Put Coordinates at Top, Middle\n Gave Coordinates GUI Cornors \n Lowered TweenDash distance, 100 to 50 \n QOL Changes to TweenDash"
 textinfoLabel.Size = UDim2.new(1, 0, 1, 0)
 textinfoLabel.Position = UDim2.new(0, 0.5, 0, -1)
 textinfoLabel.BackgroundColor3 = Color3.new(0, 0, 0)
