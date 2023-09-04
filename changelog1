@@ -159,7 +159,7 @@ infoLabel.TextSize = 22
 infoLabel.Parent = infoGui
 
 local textinfoLabel = Instance.new("TextLabel")
-textinfoLabel.Text = " More Script Changes \n AutoExec cursor to KurumiCursor\n Renamed VelocityHighJump to VelocityJump \n TimeChanger to LightingChanger \n Added more settings to LightingChanger \n Put Coordinates at Top, Middle\n Gave Coordinates GUI Cornors \n Lowered TweenDash distance, 100 to 50 \n QOL Changes to TweenDash"
+textinfoLabel.Text = " More Script Changes \n AutoExec cursor to KurumiCursor \n Changed several fonts to LuckiestGuy\n Renamed VelocityHighJump to VelocityJump \n TimeChanger to LightingChanger \n Added more settings to LightingChanger \n Removed the starter notification when executing vape \n Put Coordinates at Top, Middle\n Gave Coordinates GUI Cornors \n Lowered TweenDash distance, 100 to 50 \n QOL Changes to TweenDash"
 textinfoLabel.Size = UDim2.new(1, 0, 1, 0)
 textinfoLabel.Position = UDim2.new(0, 0.5, 0, -1)
 textinfoLabel.BackgroundColor3 = Color3.new(0, 0, 0)
