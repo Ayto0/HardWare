@@ -1,0 +1,21 @@
+local textChatService = game:GetService("TextChatService")
+
+textChatService.OnIncomingMessage = function(message)
+    local p = Instance.new("TextChatMessageProperties")
+    if message.TextSource then
+        local player = game:GetService("Players"):GetPlayerByUserId(message.TextSource.UserId)
+
+        if player then
+            if player.UserId == game.Players.LocalPlayer.UserId then
+                if player.Name == "AytoisHard" then
+                    p.PrefixText = "<font color='#c87fe3'>[⚔️⚔️⚔️]</font> " .. message.PrefixText
+                elseif player.Name == "OnAyto3" or player.Name == "AytoAuditorium" or player.Name == "CreatorKyto2" or player.Name == "CreatorKyto3" then
+                    p.PrefixText = "<font color='#c87fe3'>[⚔️⚔️]</font> " .. message.PrefixText
+                else
+                    p.PrefixText = "<font color='#43e661'>[⚔️]</font> " .. message.PrefixText
+                end
+            end
+        end
+    end
+    return p
+end
