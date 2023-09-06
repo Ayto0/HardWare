@@ -1,0 +1,38 @@
+local coordinatesScreenGui = Instance.new("ScreenGui")
+coordinatesScreenGui.Name = "CoordinatesGui"
+
+local coordinatesLabel = Instance.new("TextLabel")
+coordinatesLabel.Name = "CoordinatesLabel"
+coordinatesLabel.Parent = coordinatesScreenGui
+coordinatesLabel.Size = UDim2.new(0, 125, 0, 21)
+coordinatesLabel.Position = UDim2.new(0.42, -0.05, 0, 0)
+coordinatesLabel.BackgroundTransparency = 0.5
+coordinatesLabel.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+coordinatesLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+coordinatesLabel.TextSize = 18
+coordinatesLabel.Font = Enum.Font.LuckiestGuy
+
+local coordinatesCornerStyle = Instance.new("UICorner")
+coordinatesCornerStyle.CornerRadius = UDim.new(0, 10)
+coordinatesCornerStyle.Parent = coordinatesLabel
+
+local function updateCoordinates()
+	if player.Character then
+		local character = player.Character
+		local humanoidRootPart = character:FindFirstChild("HumanoidRootPart")
+		if humanoidRootPart then
+			local position = humanoidRootPart.Position
+			local formattedPosition = string.format("%d, %d, %d", math.floor(position.X), math.floor(position.Y), math.floor(position.Z))
+			coordinatesLabel.Text = " " .. formattedPosition
+		else
+			coordinatesLabel.Text = " N/A"
+		end
+	else
+		coordinatesLabel.Text = " N/A"
+	end
+end
+
+player.CharacterAdded:Connect(updateCoordinates)
+game:GetService("RunService").Heartbeat:Connect(updateCoordinates)
+
+coordinatesScreenGui.Parent = game:GetService("CoreGui")
