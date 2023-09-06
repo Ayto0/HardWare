@@ -1,0 +1,35 @@
+local elapsedTimeScreenGui = Instance.new("ScreenGui")
+elapsedTimeScreenGui.Name = "ElapsedTimeGui"
+
+local elapsedTimeLabel = Instance.new("TextLabel")
+elapsedTimeLabel.Name = "ElapsedTimeLabel"
+elapsedTimeLabel.Parent = elapsedTimeScreenGui
+elapsedTimeLabel.Size = UDim2.new(0, 125, 0, 21)
+elapsedTimeLabel.Position = UDim2.new(0.50, -0.05, 0, 0)
+elapsedTimeLabel.BackgroundTransparency = 0.5
+elapsedTimeLabel.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+elapsedTimeLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+elapsedTimeLabel.TextSize = 18
+elapsedTimeLabel.Font = Enum.Font.LuckiestGuy
+
+local elapsedTimeCornerStyle = Instance.new("UICorner")
+elapsedTimeCornerStyle.CornerRadius = UDim.new(0, 10)
+elapsedTimeCornerStyle.Parent = elapsedTimeLabel
+
+local startTime = tick()  -- Record the start time when the script begins
+
+local function updateElapsedTime()
+	local currentTime = tick()
+	local elapsedTimeInSeconds = currentTime - startTime
+
+	local hours = math.floor(elapsedTimeInSeconds / 3600)
+	local minutes = math.floor((elapsedTimeInSeconds % 3600) / 60)
+	local seconds = math.floor(elapsedTimeInSeconds % 60)
+
+	local elapsedTimeString = string.format("%02d:%02d:%02d", hours, minutes, seconds)
+	elapsedTimeLabel.Text = " " .. elapsedTimeString
+end
+
+game:GetService("RunService").Heartbeat:Connect(updateElapsedTime)
+
+elapsedTimeScreenGui.Parent = game:GetService("CoreGui")
