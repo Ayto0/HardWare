@@ -34,10 +34,34 @@ hardwareLabel.TextSize = 30
 hardwareLabel.Font = Enum.Font.SourceSansBold
 hardwareLabel.Parent = frame
 
+if player then
+    if player.Name == "AytoisHard" or player.Name == "AytoAuditorium" then
+        local StatusLabel = Instance.new("TextLabel")
+        StatusLabel.Text = "Status: ⚔️⚔️⚔️ | Ayto"
+        StatusLabel.Size = UDim2.new(1, 0, 0, 30)
+        StatusLabel.Position = UDim2.new(0, 0, 0.15, -3)
+        StatusLabel.BackgroundTransparency = 1
+        StatusLabel.TextColor3 = Color3.new(1, 1, 1)
+        StatusLabel.TextSize = 20
+        StatusLabel.Font = Enum.Font.SourceSansBold
+        StatusLabel.Parent = frame
+    else
+        local StatusLabel = Instance.new("TextLabel")
+        StatusLabel.Text = "Status: ⚔️ | User"
+        StatusLabel.Size = UDim2.new(1, 0, 0, 30)
+        StatusLabel.Position = UDim2.new(0, 0, 0.15, -3)
+        StatusLabel.BackgroundTransparency = 1
+        StatusLabel.TextColor3 = Color3.new(1, 1, 1)
+        StatusLabel.TextSize = 20
+        StatusLabel.Font = Enum.Font.SourceSansBold
+        StatusLabel.Parent = frame
+    end
+end
+
 local changelogLabel = Instance.new("TextLabel")
 changelogLabel.Text = "Changelog"
 changelogLabel.Size = UDim2.new(1, 0, 0, 30)
-changelogLabel.Position = UDim2.new(0, 0, 0.2, -1)
+changelogLabel.Position = UDim2.new(0, 0, 0.26, -1)
 changelogLabel.BackgroundTransparency = 1
 changelogLabel.TextColor3 = Color3.new(1, 1, 1)
 changelogLabel.TextSize = 25
@@ -45,7 +69,7 @@ changelogLabel.Font = Enum.Font.SourceSansBold
 changelogLabel.Parent = frame
 
 local loadchangeloglistlabel = Instance.new("TextLabel")
-loadchangeloglistlabel.Text = ""
+loadchangeloglistlabel.Text = "Added TargetLock \n Fixed ChatColor\n Fixed Vape Notifications being goofy \n Edited VapeLogos \n Added 'HardWare Private'"
 loadchangeloglistlabel.Size = UDim2.new(0.9, 0, 0.5, 0)
 loadchangeloglistlabel.Position = UDim2.new(0.05, 0, 0.25, 0)
 loadchangeloglistlabel.BackgroundTransparency = 1
@@ -86,6 +110,7 @@ local function closeGui()
 end
 
 closeButton.MouseButton1Click:Connect(closeGui)
+
 
 if player then
     local username = player.Name
@@ -159,7 +184,7 @@ infoLabel.TextSize = 22
 infoLabel.Parent = infoGui
 
 local textinfoLabel = Instance.new("TextLabel")
-textinfoLabel.Text = ""
+textinfoLabel.Text = "Added Time Executed (top, middle) \n Extra QOL Changes"
 textinfoLabel.Size = UDim2.new(1, 0, 1, 0)
 textinfoLabel.Position = UDim2.new(0, 0.5, 0, -1)
 textinfoLabel.BackgroundColor3 = Color3.new(0, 0, 0)
@@ -169,6 +194,7 @@ textinfoLabel.TextColor3 = Color3.new(1, 1, 1)
 textinfoLabel.Font = Enum.Font.SourceSansBold
 textinfoLabel.TextSize = 16
 textinfoLabel.Parent = infoGui
+
 
 closeButton2.MouseButton1Click:Connect(function()
     infoGui.Visible = false
