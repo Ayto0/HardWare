@@ -1,4 +1,27 @@
+local player = game.Players.LocalPlayer
 local textChatService = game:GetService("TextChatService")
+
+local hwwl = {"B0EA34E8-BF19-4E63-A1C0-73AF61D9ECCD"}
+local users = {}
+local HWID = game:GetService("RbxAnalyticsService"):GetClientId()
+
+function getID(plr)
+    for _, v in pairs(users) do
+        if v == plr.Name then
+            return true
+        end
+    end
+    return false
+end
+
+function whitelisted()
+    for _, v in pairs(hwwl) do
+        if v == HWID then
+            return true
+        end
+    end
+    return false
+end
 
 textChatService.OnIncomingMessage = function(message)
     local p = Instance.new("TextChatMessageProperties")
@@ -7,7 +30,7 @@ textChatService.OnIncomingMessage = function(message)
 
         if player then
             if player.UserId == game.Players.LocalPlayer.UserId then
-                if player.Name == "AytoisHard" or player.Name == "AytoAuditorium" then
+                if whitelisted() then
                     p.PrefixText = "<font color='#c87fe3'>[⚔️⚔️⚔️]</font> " .. message.PrefixText
                 else
                     p.PrefixText = "<font color='#43e661'>[⚔️]</font> " .. message.PrefixText
