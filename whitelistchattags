@@ -31,7 +31,7 @@ textChatService.OnIncomingMessage = function(message)
         if player then
             if player.UserId == game.Players.LocalPlayer.UserId then
                 if whitelisted() then
-                    p.PrefixText = "<font color='#c87fe3'>[⚔️⚔️⚔️]</font> " .. message.PrefixText
+                    p.PrefixText = "<font color='#c87fe3'>[⚔️⚔️⚔]</font> " .. message.PrefixText
                 else
                     p.PrefixText = "<font color='#43e661'>[⚔️]</font> " .. message.PrefixText
                 end
